@@ -1,26 +1,26 @@
 <?php
-    class movie {
-
-        public $title;
-        public $lang;
-        public $country;
-
-        public function __construct($title, $lang, $country) {
-
-            $this -> title = $title;
-            $this -> lang = $lang;
-            $this -> country = $country;
-        }
-
-
-        public function getMovie() {
-
-            return $this -> title. " " . $this -> lang  . $this -> country;
-        }
-    }
-
-    $movie1 = new movie("Pirati dei Caraibi" , "EN" , "USA",);
-    var_dump($movie1);
-
-    echo $movie1->getMovie();
+    
+    include __DIR__ . '/db.php';
+    include __DIR__ . '/models/movie.php';
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Movies</title>
+</head>
+<body>
+    <div>
+        <h1>Lista Film</h1>
+        <ul>
+            <?php foreach ($movies as $movie) { ?>
+                <li>
+                    <?php echo $movie->getMovieDetails(); ?>
+                </li>
+            <?php } ?>
+        </ul>
+    </div>
+</body>
+</html>
