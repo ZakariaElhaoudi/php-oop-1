@@ -1,7 +1,7 @@
 
 <?php
 
-    class Movie {
+    class MovieClass {
 
         public $title;
         public $lang;

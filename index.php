@@ -1,7 +1,8 @@
 <?php
     
+    // include __DIR__ . '/models/movie.php';
     include __DIR__ . '/db.php';
-    include __DIR__ . '/models/movie.php';
+    
 ?>
 
 <!DOCTYPE html>
